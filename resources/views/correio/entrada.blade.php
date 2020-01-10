@@ -1,14 +1,20 @@
 @extends('layouts.correio')
 
+@section('title')
+
+    REGES | Caixa de Entrada
+
+@endsection
+
 @section('content_header')
     <h1>Recebido</h1>
-    @endsection
+@endsection
 
 @section('conteudo')
 
-        <div class="card card-primary card-outline">
-            <div class="card-header">
-                <h3 class="card-title">Caixa de Entrada</h3>
+    <div class="card card-primary card-outline">
+        <div class="card-header">
+            <h3 class="card-title">Caixa de Entrada</h3>
 
                 <div class="card-tools">
                     <div class="input-group input-group-sm">
@@ -289,6 +295,6 @@
                 </div>
             </div>
         </div>
-        <!-- /.card -->
+
 
 @endsection

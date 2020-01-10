@@ -28,7 +28,6 @@ Route::get('/about', 'PagesController@aboutpage');
 Route::get('/colabs', 'PagesController@colabs');
 Route::get('/perfilform', 'PagesController@personal_information_form');
 Route::get('/perfilpessoal', 'PagesController@perfil_pessoal');
-Route::get('/calendario', 'FullCalendarController@index');
 Route::get('/candidatura', 'PagesController@candidatura');
 Route::get('/comp_ausencia', 'PagesController@comprovativo_ausencia');
 Route::get('/comp_iban', 'PagesController@comprovativo_iban');
@@ -41,8 +40,16 @@ Route::get('/objetivospessoais', 'PagesController@objetivospessoais');
 Route::get('/fazerpedido', 'PagesController@fazerpedido');
 Route::get('/historicopedidos', 'PagesController@historicopedidos');
 
-//fullcalender
-Route::get('/fullcalendar','FullCalendarController@index');
-Route::post('/fullcalendar/create','FullCalendarController@create');
-Route::post('/fullcalendar/update','FullCalendarController@update');
-Route::post('/fullcalendar/delete','FullCalendarController@destroy');
+
+//fullcalendar
+
+Route::get('/calendario', 'FullCalendarController@index');
+Route::post('/fullcalendar/create', 'FullCalendarController@create');
+Route::post('/fullcalendar/update', 'FullCalendarController@update');
+Route::post('/fullcalendar/delete', 'FullCalendarController@destroy');
+
+
+Route::resource('/HomeController', 'HomeController');
+Route::get('/insertObjetivoImpresarial', 'HomeController@index')->name('addObjectivoGet');
+Route::post('/insertObjetivoImpresarial', 'HomeController@addObjetivosImpresariais')->name('addObjetivo');
+Route::get('insertObjetivoImpresarial', 'HomeController@getallcompanygoals')->name('getallcompanygoals');

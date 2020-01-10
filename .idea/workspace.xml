@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bc52fbf-d8d0-4ab1-9f32-7b2181ac1adb" name="Default Changelist" comment="" />
+    <list default="true" id="3bc52fbf-d8d0-4ab1-9f32-7b2181ac1adb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/a/8ac4088c8d8e07787c02137cb19252af2c05e74e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/2/a2a516abb04bf3dd73ba4b569b16cc453e3ac2bb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/2/a2a516abb04bf3dd73ba4b569b16cc453e3ac2bb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/9/d92da1b89a77aaddc25a5c29ba601e942590e581" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/9/d92da1b89a77aaddc25a5c29ba601e942590e581" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/correio/compor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/correio/compor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/correio/entrada.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/correio/entrada.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/correio/enviado.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/correio/enviado.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/fullcalendar/fullcalendar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fullcalendar/fullcalendar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/calendario.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/objetivospessoais.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/objetivospessoais.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/perfilpessoal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/perfilpessoal.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +29,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -167,6 +187,12 @@
       <workItem from="1578605851570" duration="10148000" />
       <workItem from="1578666295516" duration="2658000" />
       <workItem from="1578668972857" duration="5925000" />
+      <workItem from="1578676678864" duration="7000" />
+      <workItem from="1578677523854" duration="133000" />
+      <workItem from="1578677661538" duration="4000" />
+      <workItem from="1578680578585" duration="391000" />
+      <workItem from="1578681572005" duration="1044000" />
+      <workItem from="1578692105827" duration="4898000" />
     </task>
     <servers />
   </component>
@@ -174,6 +200,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="294" y="30" width="767" height="738" key="CommitChangelistDialog2" timestamp="1578677567746">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="294" y="30" width="767" height="738" key="CommitChangelistDialog2/0.30.1366.738@0.30.1366.738" timestamp="1578677567746" />
     <state x="466" y="157" width="424" height="485" key="FileChooserDialogImpl" timestamp="1578668254525">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
@@ -198,9 +228,13 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="187" y="34" width="992" height="731" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1578612208893" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1578670821217">
+    <state x="488" y="319" width="380" height="161" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578692215513">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1578670821217" />
+    <state x="488" y="319" width="380" height="161" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.30.1366.738@0.30.1366.738" timestamp="1578692215513" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1578697032759">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1578697032759" />
   </component>
 </project>

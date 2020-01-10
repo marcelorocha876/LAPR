@@ -1,8 +1,22 @@
 @extends('layouts.master')
 
+@section('title')
+    REGES | Início
+@endsection
+
 @section('content_header')
 
     <h1>Início</h1>
+    @if ($errors->any())
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
 @endsection
 
@@ -33,20 +47,28 @@
                                 </ol>
                                 <div class="carousel-inner">
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="https://placehold.it/900x500/39CCCC/ffffff&amp;text=I+Love+Bootstrap" alt="First slide">
+                                        <img class="d-block w-100"
+                                             src="https://placehold.it/900x500/39CCCC/ffffff&amp;text=I+Love+Bootstrap"
+                                             alt="First slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="https://placehold.it/900x500/3c8dbc/ffffff&amp;text=I+Love+Bootstrap" alt="Second slide">
+                                        <img class="d-block w-100"
+                                             src="https://placehold.it/900x500/3c8dbc/ffffff&amp;text=I+Love+Bootstrap"
+                                             alt="Second slide">
                                     </div>
                                     <div class="carousel-item active">
-                                        <img class="d-block w-100" src="https://placehold.it/900x500/f39c12/ffffff&amp;text=I+Love+Bootstrap" alt="Third slide">
+                                        <img class="d-block w-100"
+                                             src="https://placehold.it/900x500/f39c12/ffffff&amp;text=I+Love+Bootstrap"
+                                             alt="Third slide">
                                     </div>
                                 </div>
-                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                                   data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Previous</span>
                                 </a>
-                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                                   data-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Next</span>
                                 </a>
@@ -79,113 +101,156 @@
                         <!-- /.card-header -->
                         <div class="card-body">
                             <ul class="todo-list ui-sortable" data-widget="todo-list">
-                                <li>
-                                    <!-- drag handle -->
-                                    <span class="handle ui-sortable-handle">
+                                <form method="get">
+                                    {{$goals = route('getallcompanygoals')}}
+                                    @if(empty($goals))
+                                        @foreach($goals as $goal)
+                                            <li>
+
+                                                <!-- drag handle -->
+                                                <span class="handle ui-sortable-handle">
                       <i class="fas fa-ellipsis-v"></i>
                       <i class="fas fa-ellipsis-v"></i>
                     </span>
-                                    <!-- checkbox -->
-                                    <div class="icheck-primary d-inline ml-2">
-                                        <input type="checkbox" value="" name="todo1" id="todoCheck1">
-                                        <label for="todoCheck1"></label>
-                                    </div>
-                                    <!-- todo text -->
-                                    <span class="text">Design a nice theme</span>
-                                    <!-- Emphasis label -->
-                                    <small class="badge badge-danger"><i class="far fa-clock"></i> 2 mins</small>
-                                    <!-- General tools such as edit or delete-->
-                                    <div class="tools">
-                                        <i class="fas fa-edit"></i>
-                                        <i class="fas fa-trash-o"></i>
-                                    </div>
-                                </li>
-                                <li class="done">
-                    <span class="handle ui-sortable-handle">
-                      <i class="fas fa-ellipsis-v"></i>
-                      <i class="fas fa-ellipsis-v"></i>
-                    </span>
-                                    <div class="icheck-primary d-inline ml-2">
-                                        <input type="checkbox" value="" name="todo2" id="todoCheck2" checked="">
-                                        <label for="todoCheck2"></label>
-                                    </div>
-                                    <span class="text">Make the theme responsive</span>
-                                    <small class="badge badge-info"><i class="far fa-clock"></i> 4 hours</small>
-                                    <div class="tools">
-                                        <i class="fas fa-edit"></i>
-                                        <i class="fas fa-trash-o"></i>
-                                    </div>
-                                </li>
-                                <li>
-                    <span class="handle ui-sortable-handle">
-                      <i class="fas fa-ellipsis-v"></i>
-                      <i class="fas fa-ellipsis-v"></i>
-                    </span>
-                                    <div class="icheck-primary d-inline ml-2">
-                                        <input type="checkbox" value="" name="todo3" id="todoCheck3">
-                                        <label for="todoCheck3"></label>
-                                    </div>
-                                    <span class="text">Let theme shine like a star</span>
-                                    <small class="badge badge-warning"><i class="far fa-clock"></i> 1 day</small>
-                                    <div class="tools">
-                                        <i class="fas fa-edit"></i>
-                                        <i class="fas fa-trash-o"></i>
-                                    </div>
-                                </li>
-                                <li>
-                    <span class="handle ui-sortable-handle">
-                      <i class="fas fa-ellipsis-v"></i>
-                      <i class="fas fa-ellipsis-v"></i>
-                    </span>
-                                    <div class="icheck-primary d-inline ml-2">
-                                        <input type="checkbox" value="" name="todo4" id="todoCheck4">
-                                        <label for="todoCheck4"></label>
-                                    </div>
-                                    <span class="text">Let theme shine like a star</span>
-                                    <small class="badge badge-success"><i class="far fa-clock"></i> 3 days</small>
-                                    <div class="tools">
-                                        <i class="fas fa-edit"></i>
-                                        <i class="fas fa-trash-o"></i>
-                                    </div>
-                                </li>
-                                <li>
-                    <span class="handle ui-sortable-handle">
-                      <i class="fas fa-ellipsis-v"></i>
-                      <i class="fas fa-ellipsis-v"></i>
-                    </span>
-                                    <div class="icheck-primary d-inline ml-2">
-                                        <input type="checkbox" value="" name="todo5" id="todoCheck5">
-                                        <label for="todoCheck5"></label>
-                                    </div>
-                                    <span class="text">Check your messages and notifications</span>
-                                    <small class="badge badge-primary"><i class="far fa-clock"></i> 1 week</small>
-                                    <div class="tools">
-                                        <i class="fas fa-edit"></i>
-                                        <i class="fas fa-trash-o"></i>
-                                    </div>
-                                </li>
-                                <li>
-                    <span class="handle ui-sortable-handle">
-                      <i class="fas fa-ellipsis-v"></i>
-                      <i class="fas fa-ellipsis-v"></i>
-                    </span>
-                                    <div class="icheck-primary d-inline ml-2">
-                                        <input type="checkbox" value="" name="todo6" id="todoCheck6">
-                                        <label for="todoCheck6"></label>
-                                    </div>
-                                    <span class="text">Let theme shine like a star</span>
-                                    <small class="badge badge-secondary"><i class="far fa-clock"></i> 1 month</small>
-                                    <div class="tools">
-                                        <i class="fas fa-edit"></i>
-                                        <i class="fas fa-trash-o"></i>
-                                    </div>
-                                </li>
+                                                <!-- checkbox -->
+                                                <div class="icheck-primary d-inline ml-2">
+                                                    <input type="checkbox" value="" name="todo1" id="todoCheck1">
+                                                    <label for="todoCheck1"></label>
+                                                </div>
+                                                <!-- todo text -->
+                                                <span class="text">{{$goal->title}}</span>
+                                                <!-- Emphasis label -->
+                                                <small class="badge badge-danger"><i class="far fa-clock"></i></small>
+                                                <!-- General tools such as edit or delete-->
+                                                <div class="tools">
+                                                    <i class="fas fa-edit"></i>
+                                                    <i class="fas fa-trash-o"></i>
+                                                </div>
+                                            </li>
+                                        @endforeach
+                                    @endif
+                                </form>
                             </ul>
+                            <!-- <li class="done">
+                 <span class="handle ui-sortable-handle">
+                   <i class="fas fa-ellipsis-v"></i>
+                   <i class="fas fa-ellipsis-v"></i>
+                 </span>
+                                 <div class="icheck-primary d-inline ml-2">
+                                     <input type="checkbox" value="" name="todo2" id="todoCheck2" checked="">
+                                     <label for="todoCheck2"></label>
+                                 </div>
+                                 <span class="text">Make the theme responsive</span>
+                                 <small class="badge badge-info"><i class="far fa-clock"></i> 4 hours</small>
+                                 <div class="tools">
+                                     <i class="fas fa-edit"></i>
+                                     <i class="fas fa-trash-o"></i>
+                                 </div>
+                             </li>
+                             <li>
+                 <span class="handle ui-sortable-handle">
+                   <i class="fas fa-ellipsis-v"></i>
+                   <i class="fas fa-ellipsis-v"></i>
+                 </span>
+                                 <div class="icheck-primary d-inline ml-2">
+                                     <input type="checkbox" value="" name="todo3" id="todoCheck3">
+                                     <label for="todoCheck3"></label>
+                                 </div>
+                                 <span class="text">Let theme shine like a star</span>
+                                 <small class="badge badge-warning"><i class="far fa-clock"></i> 1 day</small>
+                                 <div class="tools">
+                                     <i class="fas fa-edit"></i>
+                                     <i class="fas fa-trash-o"></i>
+                                 </div>
+                             </li>
+                             <li>
+                 <span class="handle ui-sortable-handle">
+                   <i class="fas fa-ellipsis-v"></i>
+                   <i class="fas fa-ellipsis-v"></i>
+                 </span>
+                                 <div class="icheck-primary d-inline ml-2">
+                                     <input type="checkbox" value="" name="todo4" id="todoCheck4">
+                                     <label for="todoCheck4"></label>
+                                 </div>
+                                 <span class="text">Let theme shine like a star</span>
+                                 <small class="badge badge-success"><i class="far fa-clock"></i> 3 days</small>
+                                 <div class="tools">
+                                     <i class="fas fa-edit"></i>
+                                     <i class="fas fa-trash-o"></i>
+                                 </div>
+                             </li>
+                             <li>
+                 <span class="handle ui-sortable-handle">
+                   <i class="fas fa-ellipsis-v"></i>
+                   <i class="fas fa-ellipsis-v"></i>
+                 </span>
+                                 <div class="icheck-primary d-inline ml-2">
+                                     <input type="checkbox" value="" name="todo5" id="todoCheck5">
+                                     <label for="todoCheck5"></label>
+                                 </div>
+                                 <span class="text">Check your messages and notifications</span>
+                                 <small class="badge badge-primary"><i class="far fa-clock"></i> 1 week</small>
+                                 <div class="tools">
+                                     <i class="fas fa-edit"></i>
+                                     <i class="fas fa-trash-o"></i>
+                                 </div>
+                             </li>
+                             <li>
+                 <span class="handle ui-sortable-handle">
+                   <i class="fas fa-ellipsis-v"></i>
+                   <i class="fas fa-ellipsis-v"></i>
+                 </span>
+                                 <div class="icheck-primary d-inline ml-2">
+                                     <input type="checkbox" value="" name="todo6" id="todoCheck6">
+                                     <label for="todoCheck6"></label>
+                                 </div>
+                                 <span class="text">Let theme shine like a star</span>
+                                 <small class="badge badge-secondary"><i class="far fa-clock"></i> 1 month</small>
+                                 <div class="tools">
+                                     <i class="fas fa-edit"></i>
+                                     <i class="fas fa-trash-o"></i>
+                                 </div>
+                             </li>
+                         </ul>-->
                         </div>
                         <!-- /.card-body -->
                         <div class="card-footer clearfix">
-                            <button type="button" class="btn btn-info float-right"><i class="fas fa-plus"></i> Add item
+                            <button class="btn btn-info float-right" data-toggle="modal"
+                                    data-target="#objetivosimpresariais"><i class="fas fa-plus"></i> Add item
                             </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="objetivosimpresariais" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="myModalLabel">Inserção de novo objetivo</h4>
+                                            <button type="button" class="close" data-dismiss="modal"><span
+                                                    aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                            </button>
+                                        </div>
+                                        <form method="POST" action="{{ route("addObjetivo") }}"
+                                              enctype="multipart/form-data">
+                                            <div class="form-group">
+                                                <table>
+                                                    <tr>
+                                                        {{ csrf_field() }}
+                                                        <td>Objetivo:</td>
+                                                        <td><input type=text" name="title" size="50"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Data de Fim:</td>
+                                                        <td><input type="date" name="end" size="30"></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="modal-footer" class="form-group">
+                                                <button type="submit" class="btn btn-primary">Adicionar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- /.card -->
@@ -195,8 +260,6 @@
 
                 <!-- right col (We are only adding the ID to make the widgets sortable)-->
                 <section class="col-lg-5 connectedSortable ui-sortable">
-
-
 
 
                     <!-- Calendar -->

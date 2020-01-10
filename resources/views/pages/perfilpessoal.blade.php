@@ -1,5 +1,12 @@
 @extends('layouts.master')
 
+
+@section('title')
+
+    REGES | Perfil Pessoal
+
+@endsection
+
 @section('content')
 
 

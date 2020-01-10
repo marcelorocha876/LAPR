@@ -1,5 +1,17 @@
 @extends('layouts.master')
 
+
+@section('title')
+
+    REGES | Objetivos Pessoais
+
+@endsection
+
+
+@section('content_header')
+    <h1>Objetivos Pessoais</h1>
+@endsection
+
 @section('content')
 
 
